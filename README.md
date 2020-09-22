@@ -1,2 +1,3 @@
 # history
-Better ZSH history config
+
+A better ZSH history config

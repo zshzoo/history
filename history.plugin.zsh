@@ -19,17 +19,10 @@ setopt no_share_history        # don't share history between all sessions
 # $HISTFILE does not belong with ZSH config files, it belongs in the data space
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
 if [[ ! -f "$HISTFILE" ]]; then
-  mkdir -p "$HISTFILE:h"
-  if [[ -f ${ZDOTDIR:-$HOME}/.zsh_history ]] && [[ ! -L ${ZDOTDIR:-$HOME}/.zsh_history ]]; then
-    mv ${ZDOTDIR:-$HOME}/.zsh_history "$HISTFILE"
-  else
-    touch "$HISTFILE"
-  fi
+  mkdir -p "$HISTFILE:h" && touch "$HISTFILE"
 fi
-if [[ ! -L "${ZDOTDIR:-$HOME}/.zsh_history" ]]; then
-  ln -sf "$HISTFILE" "${ZDOTDIR:-$HOME}/.zsh_history"
-fi
+
 # you can set $SAVEHIST and $HISTSIZE to anything greater than 1000 and 2000
-# respectively, but if not we'll set the values to 5000 and 10000.
-[[ $SAVEHIST -gt 1000 ]] || SAVEHIST=5000
-[[ $HISTSIZE -gt 2000 ]] || HISTSIZE=10000
+# respectively, but if not we'll set the values to something bigger.
+[[ $SAVEHIST -gt 1000 ]] || SAVEHIST=10000
+[[ $HISTSIZE -gt 2000 ]] || HISTSIZE=50000

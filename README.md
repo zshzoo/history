@@ -1,9 +1,6 @@
 # zsh-history
 
-**ARCHIVAL NOTICE:**
-_This functionality has been integrated to [mattmc3/ez](https://github.com/mattmc3/ez), which is corrects all the poor ZSH defaults, not just history. Use that instead_
-
-> A better ZSH history config because ZSH defaults are meh.
+> A better ZSH history config because ZSH defaults are not too good.
 
 ## Installation
 

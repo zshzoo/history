@@ -1,4 +1,5 @@
-### History
+# history.zsh
+
 # http://zsh.sourceforge.net/Doc/Release/Options.html#History
 setopt append_history          # append to history file
 setopt extended_history        # write the history file in the ':start:elapsed;command' format
@@ -15,7 +16,7 @@ setopt hist_verify             # don't execute immediately upon history expansio
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 setopt no_share_history        # don't share history between all sessions
 
-# $HISTFILE does not belong with ZSH config files, it belongs in the data dirs
+# $HISTFILE belongs in the data home, not with the configs
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
 if [[ ! -f "$HISTFILE" ]]; then
   mkdir -p "$HISTFILE:h" && touch "$HISTFILE"
@@ -23,8 +24,8 @@ fi
 
 # you can set $SAVEHIST and $HISTSIZE to anything greater than the ZSH defaults
 # (1000 and 2000 respectively), but if not we make them way bigger.
-[[ $SAVEHIST -gt 1000 ]] || SAVEHIST=50000
+[[ $SAVEHIST -gt 1000 ]] || SAVEHIST=20000
 [[ $HISTSIZE -gt 2000 ]] || HISTSIZE=100000
 
-# let's make the history command more useful
+# make the history command more useful
 alias history="fc -li"

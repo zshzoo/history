@@ -23,7 +23,7 @@ fi
 
 # you can set $SAVEHIST and $HISTSIZE to anything greater than the ZSH defaults
 # (1000 and 2000 respectively), but if not we make them way bigger.
-[[ $SAVEHIST -gt 1000 ]] || SAVEHIST=20000
+[[ $SAVEHIST -gt 1000 ]] || SAVEHIST=50000
 [[ $HISTSIZE -gt 2000 ]] || HISTSIZE=100000
 
 # let's make the history command more useful

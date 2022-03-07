@@ -11,7 +11,7 @@
 
 To install using a Zsh plugin manager, add the following to your .zshrc
 
-- [pz]: `pz source zshzoo/history`
+- [antidote]: `antidote bundle zshzoo/history`
 - [zcomet]: `zcomet load zshzoo/history`
 - [zgenom]: `zgenom load zshzoo/history`
 - [znap]: `znap source zshzoo/history`
@@ -34,7 +34,7 @@ source ${ZDOTDIR:-~}/.zplugins/history/history.zsh
 [ohmyzsh]: https://github.com/ohmyzsh/ohmyzsh
 [prezto]: https://github.com/sorin-ionescu/prezto
 [zshzoo]: https://github.com/zshzoo/zshzoo
-[pz]: https://github.com/mattmc3/pz
+[antidote]: https://github.com/mattmc3/antidote
 [zcomet]: https://github.com/agkozak/zcomet
 [zgenom]: https://github.com/jandamm/zgenom
 [znap]: https://github.com/marlonrichert/zsh-snap
